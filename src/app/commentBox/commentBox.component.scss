@@ -1,0 +1,29 @@
+.spacer {
+  margin-bottom: 100px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form {
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.text {
+  width: 40%;
+}
+
+@media (max-width: 991px) {
+  .text {
+    width: 80%;
+  }
+}
+
+.send {
+  margin-left: 10px;
+  height: 67px;
+  bottom: 12px;
+}

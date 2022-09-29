@@ -1,0 +1,29 @@
+.nav {
+  //margin-bottom: 50px;
+  position: fixed;
+  width: 100%;
+  //   top: -200px;
+  //   padding-top: 200px;
+  //   height: 250px;
+}
+
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: fixed;
+  //height: 50px;
+  display: flex;
+  width: 100%;
+}
+
+.nav.hide-nav {
+  display: none; /* You can play on opacity for nice transitions*/
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,27 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  //justify-content: space-around;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav.hide-nav {
+  display: none; /* You can play on opacity for nice transitions*/
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <mat-form-field appearance="outline" class="text">
+      <mat-label>Comment..</mat-label>
+      <textarea formControlName="text" matInput placeholder="..."></textarea>
+    </mat-form-field>
+    <button
+      mat-stroked-button
+      class="send"
+      (click)="commentSent()"
+      [disabled]="!form.valid"
+    >
+      <a>Send</a>
+    </button>
+  </form>
+</div>
+<div>
+  <app-comment></app-comment>
+</div>
+
+<div class="spacer"></div>
+<h1 style="color: white">a</h1>
