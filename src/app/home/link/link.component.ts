@@ -10,10 +10,13 @@ export class LinkComponent implements OnInit {
   @Input() text = '';
   @Input() date = '';
   @Input() number = '';
+  image: string | undefined;
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.image = `assets/images/ep${this.number}thumbnail.png`;
+  }
 
   linkClicked() {
     this.router.navigate([`/episode${this.number}`]);

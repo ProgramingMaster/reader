@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "howtobecomeasupervillain"
+  },
+  "targets": {
+    "howtobecomeasupervillain": {
+      "hosting": {
+        "reader": [
+          "howtobecomeasupervillain"
+        ]
+      }
+    }
   }
 }

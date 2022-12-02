@@ -7,14 +7,22 @@ import { AppService } from '../service/app.service';
   styleUrls: ['./episode1.component.scss'],
 })
 export class EpisodeComponent implements OnInit {
+  commentsList: any;
   constructor(private appService: AppService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getComments();
+  }
 
-  sendComment(text: string) {
-    if (text == '') {
-      return;
-    }
-    this.appService.sendComment(text);
+  getComments() {
+    this.appService.getComments('1').subscribe((x) => {
+      this.commentsList = x.reverse();
+    });
+    //console.log(this.commentList);
+  }
+
+  sendComment(form: any) {
+    this.appService.sendComment(form, '1');
+    //this.getComments();
   }
 }

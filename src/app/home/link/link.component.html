@@ -1,6 +1,10 @@
 <div (click)="linkClicked()" class="link" matRipple>
   <mat-divider></mat-divider>
-  <img src="../../assets/images/ep1header.png" class="pic" />
+  <!-- <img [src]="image" class="pic" /> -->
+  <div
+    class="pic"
+    [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+  ></div>
   <p>
     <span class="text">{{ text }}</span
     ><br /><br /><span class="date">{{ date }}</span>

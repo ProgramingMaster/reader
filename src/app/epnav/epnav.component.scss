@@ -13,6 +13,10 @@
   overflow-x: hidden;
 }
 
+.noclick {
+  cursor: default;
+}
+
 .nav {
   position: fixed;
   //height: 50px;
@@ -21,9 +25,59 @@
 }
 
 .nav.hide-nav {
-  display: none; /* You can play on opacity for nice transitions*/
+  // display: none; /* You can play on opacity for nice transitions*/
+  //animation: fadeOut 0.5s;
+  // -webkit-animation: fadeOut 0.5s;
+  // -moz-animation: fadeOut 0.5s;
+  // -o-animation: fadeOut 0.5s;
+  // -ms-animation: fadeOut 0.5s;
+}
+
+.arrow {
+  padding-bottom: 43px;
 }
 
 .spacer {
   flex: 1 1 auto;
 }
+
+// @keyframes fadeOut {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @-webkit-keyframes fadeOut {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @-moz-keyframes fadeOut {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @-o-keyframes fadeOut {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @-ms-keyframes fadeOut {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }

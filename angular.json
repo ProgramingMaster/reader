@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "reader:build:production",
+            "firebaseProject": "howtobecomeasupervillain",
+            "firebaseHostingSite": "howtobecomeasupervillain"
+          }
         }
       }
     }

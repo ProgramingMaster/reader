@@ -1,6 +1,11 @@
 <div class="container">
   <form class="form" [formGroup]="form">
     <mat-form-field appearance="outline" class="text">
+      <mat-label>Name...</mat-label>
+      <input matInput formControlName="name" matInput placeholder="..." />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline" class="text">
       <mat-label>Comment..</mat-label>
       <textarea formControlName="text" matInput placeholder="..."></textarea>
     </mat-form-field>
@@ -14,8 +19,8 @@
     </button>
   </form>
 </div>
-<div>
-  <app-comment></app-comment>
+<div *ngFor="let comment of commentsList">
+  <app-comment [comment]="comment"></app-comment>
 </div>
 
 <div class="spacer"></div>

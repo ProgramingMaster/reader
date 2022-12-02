@@ -2,10 +2,13 @@
   <div id="info">
     <h1 class="title">How to become a Super Villain</h1>
     <p class="bio">
-      The Marked Man has struck again, and rookie officer Callahan and her
-      partner are the first on the scene of his latest grisly murder. The
-      investigation quickly takes them into the dangerous depths of Shiloh,
-      where more than just their suspect might be hiding in wait.
+      Theo Midway is a completely normal young girl, if you ignore her goal to
+      take over the world, occasional arson charges, and her imaginary friend
+      who gives her “plot armor”… or whatever that means. Join Theo on a totally
+      normal coming of age story, full of comedy, adventure and romance! AND
+      ABSOLUTELY NOTHING WILL INTERFERE WITH THAT, THERE IS NO PROPHECY!!
+      <br /><br />
+      <b>New Episodes every other Saturday</b>
     </p>
   </div>
   <div class="spacer"></div>
@@ -15,9 +18,34 @@
         link component is just a url. And I make a new url for each episode
   -->
   <mat-card class="card">
-    <mat-card-title> How to Become a Supervillain</mat-card-title>
+    <mat-card-title>
+      <app-social></app-social>
+    </mat-card-title>
     <mat-card-content>
-      <app-link text="Episode 1" date="Oct 1 2022" number="1"></app-link>
+      <!-- <div>
+        <div class="link">
+          <mat-divider></mat-divider>
+          <img src="../../assets/images/ep5thumbnail.png" class="pic" />
+          <div
+            class="pic"
+            [ngStyle]="{
+              'background-image': 'url(../../assets/images/ep5thumbnail.png)'
+            }"
+          ></div>
+          <p>
+            <span class="text">Episode 5</span><br /><br /><span class="date"
+              >Coming November 26th</span
+            >
+            <span class="number">#5</span>
+          </p>
+        </div>
+      </div> -->
+
+      <app-link text="Episode 5" date="Nov 26, 2022" number="5"></app-link>
+      <app-link text="Episode 4" date="Nov 12, 2022" number="4"></app-link>
+      <app-link text="Episode 3" date="Oct 29, 2022" number="3"></app-link>
+      <app-link text="Episode 2" date="Oct 15, 2022" number="2"></app-link>
+      <app-link text="Episode 1" date="Oct 1, 2022" number="1"></app-link>
 
       <mat-divider></mat-divider>
     </mat-card-content>

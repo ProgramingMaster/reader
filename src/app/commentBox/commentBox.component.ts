@@ -9,7 +9,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 export class CommentsComponent implements OnInit {
   form!: FormGroup;
 
-  @Input() commentsCol: any;
+  @Input() commentsList: any;
 
   @Output() sendComment = new EventEmitter();
 
@@ -17,11 +17,13 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this._formBuilder.group({
+      name: ['', []],
       text: ['', [Validators.required]],
     });
   }
 
   commentSent() {
-    this.sendComment.emit(this.form.value.text);
+    this.sendComment.emit(this.form.value);
+    this.form.controls['text'].reset();
   }
 }

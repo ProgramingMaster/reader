@@ -1,14 +1,59 @@
 <p class="nav" [class.hide-nav]="hideNav">
   <mat-toolbar color="primary">
-    <button mat-icon-button aria-label="back">
+    <button (click)="back()" mat-icon-button aria-label="back">
       <mat-icon>arrow_back</mat-icon>
     </button>
     <span class="spacer"></span>
-    <span>Episode 1</span>
-    <span class="spacer"></span>
 
-    <button mat-icon-button aria-label="share">
-      <mat-icon>menu</mat-icon>
+    <button
+      (click)="previousEpisode()"
+      *ngIf="number != 1"
+      mat-icon-button
+      class="arrow"
+      aria-label="Previous Episode"
+    >
+      <mat-icon>arrow_left</mat-icon>
+    </button>
+    <button
+      disableRipple="true"
+      *ngIf="number == 1"
+      mat-icon-button
+      class="arrow noclick"
+      aria-label="Filler"
+    >
+      <mat-icon></mat-icon>
+    </button>
+
+    <span>Episode {{ number }}</span>
+
+    <button
+      (click)="nextEpisode()"
+      *ngIf="number != total"
+      mat-icon-button
+      class="arrow"
+      aria-label="Next Episode"
+    >
+      <mat-icon>arrow_right</mat-icon>
+    </button>
+    <button
+      *ngIf="number == total"
+      disableRipple="true"
+      mat-icon-button
+      class="arrow noclick"
+      aria-label="Filler"
+    >
+      <mat-icon></mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+    <button
+      class="noclick"
+      disableRipple="true"
+      mat-icon-button
+      aria-label="Favorite"
+    >
+      <!-- <mat-icon>favorite_border</mat-icon> -->
+      <mat-icon></mat-icon>
     </button>
   </mat-toolbar>
 </p>
