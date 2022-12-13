@@ -24,6 +24,7 @@ import { Episode2Component } from './episode2/episode2.component';
 import { EpnavComponent } from './epnav/epnav.component';
 import { CommentsComponent } from './commentBox/commentBox.component';
 import { CommentComponent } from './commentBox/comment/comment.component';
+
 //import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 // Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -34,6 +35,7 @@ import { SocialComponent } from './home/social/social.component';
 import { Episode3Component } from './episode3/episode3.component';
 import { Episode4Component } from './episode4/episode4.component';
 import { Episode5Component } from './episode5/episode5.component';
+import { Episode6Component } from './episode6/episode6.component';
 // import { provideAuth, getAuth } from '@angular/fire/auth';
 // import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
@@ -51,6 +53,7 @@ import { Episode5Component } from './episode5/episode5.component';
     Episode3Component,
     Episode4Component,
     Episode5Component,
+    Episode6Component,
   ],
   imports: [
     BrowserModule,

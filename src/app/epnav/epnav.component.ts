@@ -8,7 +8,7 @@ import { AppService } from '../service/app.service';
   styleUrls: ['./epnav.component.scss'],
 })
 export class EpnavComponent implements OnInit {
-  total = 5;
+  total = 6;
 
   @Input() number: any;
 
