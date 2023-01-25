@@ -30,6 +30,28 @@ export class AppService {
     return commentsList.valueChanges();
   }
 
+  getLikes(episode: any) {
+    return this.db.list(`episode${episode}/likes`).valueChanges();
+  }
+
+  addLike(episode: any) {
+    let current_likes;
+
+    this.getLikes(episode).subscribe((x) => {
+      current_likes = x;
+    });
+
+    if (current_likes == undefined) {
+      this.db.list(`episode${episode}/likes`).push({
+        likes: '1',
+      });
+    } else {
+      this.db
+        .list(`episode${episode}/likes`)
+        .update('likes', current_likes + 1);
+    }
+  }
+
   // like(number: Number) {
   //   let currentLikes = this.db.list(`episode${number}`);
 

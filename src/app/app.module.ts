@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { NgOptimizedImage } from '@angular/common';
 
 //material
 import { MatCardModule } from '@angular/material/card';
@@ -16,11 +17,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // components
 import { LinkComponent } from './home/link/link.component';
+import { LinkTeaseComponent } from './home/linktease/linktease.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
 import { HomeComponent } from './home/home.component';
-import { EpisodeComponent } from './episode1/episode1.component';
-import { Episode2Component } from './episode2/episode2.component';
+
 import { EpnavComponent } from './epnav/epnav.component';
 import { CommentsComponent } from './commentBox/commentBox.component';
 import { CommentComponent } from './commentBox/comment/comment.component';
@@ -32,10 +33,7 @@ import { environment } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { SocialComponent } from './home/social/social.component';
-import { Episode3Component } from './episode3/episode3.component';
-import { Episode4Component } from './episode4/episode4.component';
-import { Episode5Component } from './episode5/episode5.component';
-import { Episode6Component } from './episode6/episode6.component';
+import { EpisodeLoaderComponent } from './episodeLoader/episodeLoader.component';
 // import { provideAuth, getAuth } from '@angular/fire/auth';
 // import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
@@ -44,16 +42,12 @@ import { Episode6Component } from './episode6/episode6.component';
     AppComponent,
     LinkComponent,
     HomeComponent,
-    EpisodeComponent,
-    Episode2Component,
     EpnavComponent,
     CommentsComponent,
     CommentComponent,
     SocialComponent,
-    Episode3Component,
-    Episode4Component,
-    Episode5Component,
-    Episode6Component,
+    EpisodeLoaderComponent,
+    LinkTeaseComponent,
   ],
   imports: [
     BrowserModule,

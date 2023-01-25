@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EpisodeComponent } from './episode1/episode1.component';
-import { Episode2Component } from './episode2/episode2.component';
-import { Episode3Component } from './episode3/episode3.component';
-import { Episode4Component } from './episode4/episode4.component';
-import { Episode5Component } from './episode5/episode5.component';
-import { Episode6Component } from './episode6/episode6.component';
+import { EpisodeLoaderComponent } from './episodeLoader/episodeLoader.component';
 
 const routes: Routes = [
   //{ path: '', redirectTo: '', pathMatch: 'full' },
   { path: '', component: HomeComponent },
-  { path: 'episode1', component: EpisodeComponent },
-  { path: 'episode2', component: Episode2Component },
-  { path: 'episode3', component: Episode3Component },
-  { path: 'episode4', component: Episode4Component },
-  { path: 'episode5', component: Episode5Component },
-  { path: 'episode6', component: Episode6Component },
+  { path: 'episode1', redirectTo: 'episode/1' },
+  { path: 'episode2', redirectTo: 'episode/2' },
+  { path: 'episode3', redirectTo: 'episode/3' },
+  { path: 'episode4', redirectTo: 'episode/4' },
+  { path: 'episode5', redirectTo: 'episode/5' },
+  { path: 'episode6', redirectTo: 'episode/6' },
+  { path: 'episode7', redirectTo: 'episode/7' },
+  { path: 'episode8', redirectTo: 'episode/8' },
+  { path: 'episode9', redirectTo: 'episode/9' },
+  { path: 'episode/:number', component: EpisodeLoaderComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

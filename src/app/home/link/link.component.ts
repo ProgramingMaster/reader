@@ -15,10 +15,10 @@ export class LinkComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.image = `assets/images/ep${this.number}/ep${this.number}thumbnail.png`;
+    this.image = `assets/images/ep${this.number}/ep${this.number}thumbnailsmall.png`;
   }
 
   linkClicked() {
-    this.router.navigate([`/episode${this.number}`]);
+    this.router.navigate([`/episode/${this.number}`]);
   }
 }

@@ -1,0 +1,12 @@
+<app-epnav [number]="number"></app-epnav>
+
+<div class="wraper" *ngFor="let link of episodeLinks">
+  <img class="image" src="{{ link }}" alt="loading..." loading="lazy" />
+</div>
+
+<app-social class="social"></app-social>
+
+<app-commentBox
+  [commentsList]="commentsList"
+  (sendComment)="sendComment($event)"
+></app-commentBox>
