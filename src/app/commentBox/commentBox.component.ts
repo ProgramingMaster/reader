@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Validators, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-commentBox',
@@ -7,13 +7,13 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./commentBox.component.scss'],
 })
 export class CommentsComponent implements OnInit {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
   @Input() commentsList: any;
 
   @Output() sendComment = new EventEmitter();
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: UntypedFormBuilder) {}
 
   ngOnInit(): void {
     this.form = this._formBuilder.group({

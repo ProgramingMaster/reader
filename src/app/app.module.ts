@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { EpnavComponent } from './epnav/epnav.component';
 import { CommentsComponent } from './commentBox/commentBox.component';
 import { CommentComponent } from './commentBox/comment/comment.component';
+import { NgOptimizedImage } from '@angular/common';
 
 //import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 // Firebase
@@ -53,6 +54,7 @@ import { EpisodeLoaderComponent } from './episodeLoader/episodeLoader.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgOptimizedImage,
     // material
     MatCardModule,
     MatDividerModule,

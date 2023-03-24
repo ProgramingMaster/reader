@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'episode7', redirectTo: 'episode/7' },
   { path: 'episode8', redirectTo: 'episode/8' },
   { path: 'episode9', redirectTo: 'episode/9' },
+  { path: 'episode10', redirectTo: 'episode/10' },
   { path: 'episode/:number', component: EpisodeLoaderComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from '../service/app.service';
-import { filter } from 'rxjs';
-declare let gtag: Function;
 
 @Component({
   selector: 'app-episode-loader',
@@ -14,7 +12,7 @@ export class EpisodeLoaderComponent implements OnInit {
   commentsList: any;
 
   // How many panels each episode has
-  panelNumbers = [15, 10, 5, 9, 7, 6, 5, 58, 6];
+  panelNumbers = [76, 64, 50, 76, 65, 55, 46, 58, 57, 84, 57, 46, 40];
 
   episodeLinks: any = [];
 

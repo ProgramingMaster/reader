@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -31,32 +32,57 @@ export class AppService {
   }
 
   getLikes(episode: any) {
-    return this.db.list(`episode${episode}/likes`).valueChanges();
+    //console.log(this.db.object(`episode${episode}/likes`).valueChanges());
+
+    return this.db.object(`episode${episode}/likes`).valueChanges();
   }
 
   addLike(episode: any) {
-    let current_likes;
-
-    this.getLikes(episode).subscribe((x) => {
-      current_likes = x;
-    });
-
-    if (current_likes == undefined) {
-      this.db.list(`episode${episode}/likes`).push({
-        likes: '1',
+    this.getLikes(episode)
+      .pipe(first())
+      .subscribe((x) => {
+        //console.log('Getlikes: ' + x);
+        if (x == null) {
+          this.db.object(`episode${episode}/likes`).set({
+            likes: 1,
+          });
+        } else {
+          // console
+          //   //@ts-ignore
+          //   .log(typeof (x.likes + 1 + ''));
+          this.db
+            .object(`episode${episode}/likes`)
+            //@ts-ignore
+            .update({ likes: Number(x.likes) + 1 });
+        }
       });
-    } else {
-      this.db
-        .list(`episode${episode}/likes`)
-        .update('likes', current_likes + 1);
-    }
+
+    // ((x) => {
+    //   //current_likes = x;
+    //   //@ts-ignore
+    //   console.log(x[0].likes);
+    //   //@ts-ignore
+    //   if (x == undefined) {
+    //     this.db.object(`episode${episode}/likes`).set({
+    //       likes: '1',
+    //     });
+    //   } else {
+    //     console
+    //       //@ts-ignore
+    //       .log(typeof (x[0].likes + 1 + ''));
+    //     this.db
+    //       .object(`episode${episode}/likes`)
+    //       //@ts-ignore
+    //       .update({ likes: x[0].likes + 1 });
+    //   }
+    // });
   }
 
-  // like(number: Number) {
-  //   let currentLikes = this.db.list(`episode${number}`);
+  like(number: Number) {
+    let currentLikes = this.db.list(`episode${number}`);
 
-  //   this.db.list(`episode${number}`).push({
-  //     likes: 0
-  //   });
-  // }
+    this.db.list(`episode${number}`).push({
+      likes: 0,
+    });
+  }
 }

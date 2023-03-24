@@ -1,7 +1,13 @@
 <app-epnav [number]="number"></app-epnav>
 
-<div class="wraper" *ngFor="let link of episodeLinks">
-  <img class="image" src="{{ link }}" alt="loading..." loading="lazy" />
+<div class="wrapper" *ngFor="let link of episodeLinks">
+  <img
+    class="image"
+    ngSrc="{{ link }}"
+    alt="loading..."
+    width="800"
+    height="1200"
+  />
 </div>
 
 <app-social class="social"></app-social>
